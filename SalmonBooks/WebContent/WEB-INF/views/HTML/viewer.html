@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="stylesheet" type="text/css" href="salmonbooks.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var selection = document.getElementsByClassName('titleMenuIcon');
+            console.log(selection);
+            for (var i = 0; i < selection.length; i++) {
+                var item = selection.item(i);
+                item.addEventListener("click", function () {
+                    clikedMenu();
+                    this.style.borderBottom = '5px solid bisque';
+                }, false);
+            }
+        }
+        function clikedMenu() {
+            var selection = document.getElementsByClassName('titleMenuIcon');
+            console.log(selection);
+            for (var i = 0; i < selection.length; i++) {
+                var item = selection.item(i);
+                item.style.borderBottom = 'none';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="titlebar">
+        <div style="float: right;" onclick="{ this.innerHTML = 'logout';}"><a href="LoginPage.html"
+                style="text-decoration: none; color : white">Login</a></div>
+        <div class="titlelogo">Salmon Page</div>
+        <div class="titleMenu">
+            <div class="titleMenuIcon"><a style="border-bottom: 5px solid bisque;">홈</a></div>
+            <div class="titleMenuIcon"><a href="FreeNovelPage.html">무료</a></div>
+            <div class="titleMenuIcon"><a href="ChargedNovelPage.html">유료</a></div>
+            <div class="titleMenuIcon"><a href="EndNovelPage.html">완결</a></div>
+            <div class="titleMenuIcon"><a href="community.html">커뮤니티</a></div>
+        </div>
+    </div>
+    <div class="novelContainer">
+        <div class="novelPanel">
+            <div style="border-bottom: 1px solid black;">
+                시궁창쥐일기<br> 1화 시궁창에 볕이 들 것 같으냐<br>다죽여버리자 님
+            </div>
+            <div style="font-size: 13px; border-bottom: 1px solid black; width : 80%; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 10px;">
+                <br><br>
+            <b>아</b>는 형들과 술을 마시고 기분 좋게 돌아오는 길이었다.<br>
+            5월이건만 아직 날은 선선해서 시원한 기분에 시원하게 취해 시원한 발걸음으로 나는 고시원으로 돌아왔다.<br>
+            한동안 끊었던 담배는 교수의 질책에 어느샌가 다시 입에 붙었고 졸업한지도 벌써 3개월이 지났다는데도 입가를 떠날 생각이 없었다. 그나마 다행이라면 적어도 한참 담배를 필 때처럼 방에서 담배를 피는 일은 없다는 정도였을까. 좌우간 나는 습관처럼 담배를 피기 위해 가방을 멘 채로 고시원의 공용 베란다로 향했다.
+            베란다에는 세탁기가 놓여있었는데 그 날은 한 아저씨도 있었다.<br>
+            담배를 피러 왔거나, 세탁기를 돌려보고 있거나.<br>
+            둘 중 하나겠거니 하고 나는 무시했다. 그 아저씨가 어떻든 내 알 바도 아닌지라, 담배를 피러오셨든, 세탁기를 돌리러 오셨든 엿이나 까잡수셔 나는 담배나 필란다 하는 기분이었다.
+            <br>
+            "젊은 형씨가 이것 좀 도와줘 봐."
+            영화나 소설 좀 봤다는 사람이면 당연히 예상했겠지만 이런 거 도와주면 안된다.
+            </div>
+            <div>
+                <br><br><br><br><br>
+                <img src="author.png">김댓글맨 (2019-08-07 : 오후 8시 35분) 너무 재밌어여 <br>
+                <img src="author.png">김댓글맨 (2019-08-07 : 오후 8시 35분) 너무 재밌어여 <br>
+                <img src="author.png">김댓글맨 (2019-08-07 : 오후 8시 35분) 너무 재밌어여 <br>
+                <img src="author.png">김댓글맨 (2019-08-07 : 오후 8시 35분) 너무 재밌어여 <br>
+                <img src="author.png">김댓글맨 (2019-08-07 : 오후 8시 35분) 너무 재밌어여 <br>
+                <img src="author.png">김댓글맨 (2019-08-07 : 오후 8시 35분) 너무 재밌어여 <br>
+                <img src="author.png">김댓글맨 (2019-08-07 : 오후 8시 35분) 너무 재밌어여 <br>
+            </div>
+            <div
+                style="border-top: 1px solid gray; height : 10%; width : 50%; padding :5% 0% 5% 40%; margin-left: auto; margin-right : auto; background: white;">
+                <div style="text-align: center; display: inline;"><a href="#"
+                        style="font-size: 60%; color: rgb(118, 118, 118)">©SalmonisDelicious</a></div>
+                <span style="color: rgb(230, 230, 230); display: inline;">|</span>
+                <div style="text-align: left; text-align: center;  display : inline;"><a href="#"
+                        style="font-size: 60%; color: rgb(118, 118, 118)">고객센터</a></div>
+            </div>
+        </div>
+        <div>
+        </div>
+    </div>
+</body>
+</html>

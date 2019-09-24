@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salmon Books 아이디/비밀번호 찾기</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../../../kh_workspace/resources_jquery/js/jquery-3.4.1.min.js"></script>
+    <style>
+        body{
+            background :rgb(241, 238, 238);
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+        }
+        .wrap {
+            width: 960px;
+            height: 100vh;
+            min-width: 360px;
+            margin:0 auto 0;
+            background:#fff
+        }
+        .content {
+            display: none;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: auto;
+        }
+        .loginform {
+            padding: 5% 30%;
+        }
+
+        .titlelogo{
+            font-family: cursive;
+            font-size: 30px;
+            color : #FFFFFF;
+            padding: 30px;
+        }
+
+        .titlebar{
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            border-radius: .1rem;
+            background: #FF6F61;
+        }
+
+        @media(max-width : 960px){
+            .wrap{
+                width: 100%;
+            }
+        }
+
+        @media(max-width : 700px){
+            .loginform{
+                padding: 0% 10%;
+            }
+        }
+
+        /*라디오버튼 숨김*/
+        input {
+            display: none;
+        }
+
+        label {
+            display: inline-block;
+            margin: 0 0 -1px;
+            padding: 15px 25px;
+            font-weight: 600;
+            text-align: center;
+            color: #ffffff;
+            border: 1px solid transparent;
+        }
+
+        label:hover {
+            color: #bbb;
+            cursor: pointer;
+        }
+
+        /*input 클릭시, label 스타일*/
+        input:checked + label {
+            color: #555;
+        }
+
+        .foot{
+            width: 100%;
+            padding-top: 18px;
+            margin-top: 117px;
+            margin-right: auto;
+            margin-left: auto;
+            border-top: 1px solid #e6e6e6;
+            /* font-family: '돋움',dotum,sans-serif; */
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="IDandPW" class="wrap">
+        <div class="titlebar">
+            <div class="titlelogo">Salmon Books</div>
+            <!-- <div class="titleMenu"> -->
+            <div class="row" style="margin-left: 0px; margin-right: 0px">
+                <div class="col">
+                    <input id="tab1" type="radio" name="tabs" checked onclick="tabChecked()"> <!--디폴트 메뉴-->
+                    <label for="tab1">아이디 찾기</label>
+                </div>
+                <div class="col">
+                    <input id="tab2" type="radio" name="tabs" onclick="tabChecked()">
+                    <label for="tab2">비밀번호 찾기</label>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="content1">
+            <div class="container" style="height:120px; padding: 10px 120px;">
+                <h3>아이디 찾기</h3><hr>
+                <p>찾으려는 아이디의 이메일과 전화번호를 입력하세요</p><br>
+            </div>
+            <div class="loginform">
+                <div class="form-group">
+                    <div class id="SearchId">
+                    <input type="email" class="form-control" id="email" placeholder="이메일을 입력해주세요">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div id="SearchPhone">
+                    <input type="text" class="form-control" id="phone" placeholder="전화번호를 입력해주세요">
+                    </div>
+                </div>
+                <div id="submitBtn" style="margin-top: 15px; float: right">
+                    <button type="submit" class="btn" style="width: 120px; background-color: #FF6F61; color: #FFFFFF; border: #FF6F61;">확인</button>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="content2">
+            <div class="container" style="height:120px; padding: 10px 120px">
+                <h3>비밀번호 찾기</h3><hr>
+                <p>비밀번호를 찾고자하는 계정의 이메일과 전화번호를 입력하세요</p><br>
+            </div>
+            <div class="loginform">
+                <div class="form-group">
+                    <div class id="SearchPWD">
+                    <input type="text" class="form-control" id="id" placeholder="아이디를 입력해주세요">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div id="loginID">
+                    <input type="email" class="form-control" id="email" placeholder="이메일을 입력해주세요">
+                    </div>
+                </div>
+                <div id="submitBtn" style="margin-top: 15px; float: right">
+                    <button type="submit" class="btn" style="width: 120px; background-color: #FF6F61; color: #FFFFFF; border: #FF6F61;">확인</button>
+                </div>
+            </div>
+        </div>
+        <div class="foot row">
+            <div class="col" style="text-align: right"><a href="#" style="font-size: 60%; color: rgb(118, 118, 118)">©SalmonisDelicious</a></div>
+            <span style="color: rgb(230, 230, 230)">|</span>
+            <div class="col" style="text-align: left;"><a href="#" style="font-size: 60%; color: rgb(118, 118, 118)">고객센터</a></div>
+        </div>
+    </div>
+    <script>
+            var tab1 = document.getElementById("tab1");
+            var content1 = document.getElementById("content1");
+            if(tab1.checked) {
+                content1.style.display = 'block';
+                content2.style.display = 'none';
+            }
+
+            function tabChecked() {
+                var tab2 = document.getElementById("tab2");
+                var content2 = document.getElementById("content2");
+
+                if(tab1.checked) {
+                    content1.style.display = 'block';
+                    content2.style.display = 'none';
+                }
+                else if(tab2.checked) {
+                    content1.style.display = 'none';
+                    content2.style.display = 'block';
+                }
+                
+            }
+        </script>
+    
+</body>
+</html>

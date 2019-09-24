@@ -1,0 +1,127 @@
+@charset "UTF-8";
+li a:link {color: black; text-decoration: none;}
+li a:visited {color: black; text-decoration: none;}
+li a:hover {color: black; text-decoration: none;}
+a:link {color: white; text-decoration: none;}
+a:visited {color: white; text-decoration: none;}
+a:hover {color: white; text-decoration: none;}
+.pbutton:link {color: #FF6F61; text-decoration: none;}
+.pbutton:visited {color: #FF6F61; text-decoration: none;}
+.pbutton:hover {color: #FF6F61; text-decoration: none; cursor: pointer;}
+
+ul {
+    list-style: none;
+    display: inline-block;
+}
+
+#hotNovelDiv {
+    text-align: center;
+}
+
+#uplNovelDiv {
+    text-align: center;
+}
+
+.hotframe {
+    height: 20%;
+    left: 20%;
+    display: inline-block;
+    margin: 1em;
+    text-align: center;
+    max-width: 250px;
+    border-style: outset;
+}
+
+.uplNovelLists__item {
+    height: 20%;
+    left: 20%;
+    margin: 1em;
+    text-align: center;
+    max-width: 250px;
+    border-style: outset;
+}
+
+
+
+.novel_pic img {
+    width: 250px;
+    height: 169px;
+    overflow: hidden;
+
+}
+
+.novel_info {
+    width: 100%;
+    height: 100%;
+}
+
+.icon_up{
+    width: 200px;
+    height: 200px;
+    border-radius:50%;
+    font-size:13px;
+    font-weight: bold;
+    background: #FF6F61;
+    text-align: center;
+    border:3px solid #FF6F61;
+    color: white;
+    position: relative;
+   
+}
+
+.icon_star{
+    border:3px solid #FF6F61;
+    background: #FF6F61;
+    color: white;
+    font-weight: bold;
+}
+
+.subj{
+    font-size:20px;
+    font-weight: bolder;
+}
+
+.authorName{
+    color: gray;
+    font-weight: bolder;
+    font-family: Monospace;
+}
+
+.pagingArea button{
+    background-color: white;
+    border: 2px solid #FF6F61;
+    color: #FF6F61;
+    font-size:30px;
+    font-size:15px;
+ width: 30px;
+ height: 25px;
+ margin-bottom: 20px;
+
+}
+
+.pbtnlist{
+	 display:none;
+   position:relative;
+   text-align: center;
+}
+
+.pbtnlist span{
+    width:20%;
+    padding:0 5px 0 0;
+}
+
+.novelContainer {
+ color: #FF6F61;
+}
+
+.hotnovelPanel {
+    width: 100%;
+    background: white;
+    font-family: 'AppleSDGothicNeo-Light', 'NanumGothic', 'Dotum', 'Helvetica', 'sans-serif';
+}
+
+#uplnovelPanel {
+    width: 100%;
+    background: white;
+    font-family: 'AppleSDGothicNeo-Light', 'NanumGothic', 'Dotum', 'Helvetica', 'sans-serif';
+}

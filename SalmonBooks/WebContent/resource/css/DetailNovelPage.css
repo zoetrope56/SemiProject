@@ -1,0 +1,111 @@
+#detailInfNovel{
+   padding: 25px;
+   width: 100%;
+   text-align: center;
+}
+      	
+body{
+    background :rgb(241, 238, 238);
+    width: 100%;
+    margin: 0;
+}
+
+.titlebar{
+    color : white;
+	font-family : 'Malgun Gothic';
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: #FF6F61;
+}
+
+.titlelogo{
+	font-family: cursive;
+    font-size: 30px;
+    color : white;
+    padding: 30px;
+}
+
+.titleMenu{
+		font-size : 25px; 
+		width: auto;
+}
+.titleMenuIcon{
+		    display: inline-block;
+            margin: 0 5px 20px 20px;
+}
+
+.novelContainer{
+    position : relative;
+}
+
+.novelPanel{
+    width: 100%;    
+    margin-top: 10px;
+    background: white;
+    font-family: 'AppleSDGothicNeo-Light', 'NanumGothic', 'Dotum', 'Helvetica', 'sans-serif';
+}
+
+.novelFont{
+    font-size: 10px; 
+    color : gray;
+    padding: 5px;
+}
+
+li {
+	list-style: none;
+}
+
+@keyframes slidein {
+    from {
+        font-size: 0px;
+        color: #FF6F61;
+    }
+
+    to {
+        font-size: 15px;
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .titlebar {
+    position:static;
+    overflow:visible;
+    }
+	.titleMenuIcon{
+		display: inline-block;
+        margin: 0 5px 20px 20px;
+    }
+}  
+@media only screen and (min-width: 961px) {
+    .titlebar{
+        width:960px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .titleMenu{
+		position : relative;
+		color : white;
+		font-family : 'Malgun Gothic';
+		font-size : 25px; 
+		width: auto;
+	}
+	
+    .novelContainer{
+        width: 960px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .novelContainer div{
+        width: 100%;
+    }
+    img{
+        display: inline-block;
+    }
+   
+    .novelListItem{ 
+        height : 100%;
+    }
+    
+}

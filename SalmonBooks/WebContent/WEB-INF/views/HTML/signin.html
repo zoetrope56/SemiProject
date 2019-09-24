@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salmon Books 회원가입</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="salmonbooks.css" />
+    <style>
+        body {
+            background: rgb(241, 238, 238);
+            height: 100vh;
+            /* width: 100%; */
+            /* margin: 0; */
+        }
+
+        .wrap {
+            width: 960px;
+            height: 100vh;
+            min-width: 360px;
+            margin: 0 auto 0;
+            background: #fff
+        }
+
+        @media(max-width : 960px) {
+            .wrap {
+                width: 100%;
+            }
+        }
+
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: auto;
+        }
+
+        .main {
+            padding: 1rem 1rem;
+            margin-bottom: 6rem;
+            border-radius: .1rem;
+        }
+
+        .loginform {
+            padding: 0% 22%;
+            /* margin-bottom: 100% */
+        }
+
+        .foot {
+            padding-top: 18px;
+            margin-top: 80px;
+            border-top: 1px solid #e6e6e6;
+            /* font-family: '돋움',dotum,sans-serif; */
+        }
+
+        .type1 {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .h4 {
+            display: inline-block;
+            padding-left: 45%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-block {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .inline-input {
+            display: inline;
+            margin-bottom: 2%;
+        }
+        span{
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+            font-size: 10pt;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            var birth = document.getElementById("year");
+            var month = document.getElementById("month");
+            var day = document.getElementById("day");
+            for (var i = 19; i >= 0; i--) {
+                var option = document.createElement('option');
+                var value = i < 10 ? '200' + i : '20' + i;
+                option.value = value;
+                option.innerHTML = value;
+                birth.appendChild(option);
+            }
+            for (var i = 100; i >= 0; i--) {
+                var option = document.createElement('option');
+                var value = i < 10 ? '190' + i : '19' + i;
+                // if( i < 10) {
+                //     value = '190'+i;
+                // }else{
+                //     value = '19'+i;
+                // }
+                option.value = value;
+                option.innerHTML = value;
+                birth.appendChild(option);
+            }
+            for (var i = 1; i <= 12; i++) {
+                var option = document.createElement('option');
+                option.value = i;
+                option.innerHTML = i;
+                month.appendChild(option);
+            }
+            for (var i = 1; i <= 31; i++) {
+                var option = document.createElement('option');
+                option.value = i;
+                option.innerHTML = i;
+                day.appendChild(option);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="titlebar">
+        <div style="float: right;" onclick="{ this.innerHTML = 'logout';}"><a href="LoginPeage.html"
+                style="text-decoration: none; color : white">Login</a></div>
+        <div class="titlelogo">Salmon Page</div>
+
+    </div>
+    <div id="login" class="wrap center-block">
+        <div class="main" id="head">
+            <h4 class="h4">회원가입</h4>
+            <br>
+            <div
+                style="margin-bottom: 5%; padding-left: 30%; margin-left: auto; margin-right: auto; display: inline-block;">
+                <span>아이디</span><br>
+                <input type="text" class="inline-input">
+                <!----<span class="info">아이디 입력후'아이디 중복확인'버튼을 클릭해주세요</span> -->
+                <br>
+                <span>이름</span><br>
+                <input type="text" class="inline-input">
+                <!----<span class="info">아이디 입력후'아이디 중복확인'버튼을 클릭해주세요</span> -->
+                <br>
+                <span>비밀번호</span><br>
+                <input type="password" class="inline-input">
+                <!-- <span class="info">비밀번호는 4~10자리로 입력해주시기 바랍니다.</span>  -->
+                <br>
+                <span>비밀번호 확인</span><br>
+                <input type="password" class="inline-input">
+                <br>
+                <span>이메일 주소</span><br>
+                <input type="text" class="inline-input">
+                @
+                <input type="text" class="inline-input">
+                <select style="height: 30px">
+                    <option>직접입력</option>
+                </select>
+                <br>
+                <span>휴대폰번호</span><br>
+                <select style="height: 30px">
+                    <option>010</option>
+                </select>
+                <input type="tel" class="inline-input">
+                <input type="tel" class="inline-input">
+                <br>
+                <span>생년월일</span><br>
+                <select id="year">
+                </select>
+                <select id="month">
+                </select>
+                <select id="day">
+                </select>
+            </div>
+            <p>
+                <button type="submit" class="btn btn-block"
+                    style="background-color: #FF6F61; color : #FFFFFF; border: #FF6F61; width : 40%;">회원가입</button>
+            </p>
+</div>
+</div>
+</body>
+
+</html>

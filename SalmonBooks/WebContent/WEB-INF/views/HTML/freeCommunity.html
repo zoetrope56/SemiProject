@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <!-- <link rel="stylesheet" type="text/css" href="/SalmonBooks/resource/css/salmonbooks.css" /> -->
+    <link rel="stylesheet" href="../../../resource/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../resource/css/custom.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <style>
+        /* .titleMenuIcon:hover{
+        animation-duration: 2s;
+        animation-name: slidein;  
+    } */
+
+        body {
+            background: rgb(241, 238, 238);
+            width: 100%;
+            margin: 0;
+        }
+
+        .titlebar {
+            color: white;
+            font-family: 'Malgun Gothic';
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: #FF6F61;
+        }
+
+        .titlelogo {
+            font-family: cursive;
+            font-size: 30px;
+            color: white;
+            padding: 30px;
+        }
+
+        .titleMenu {
+            font-size: 25px;
+            width: auto;
+        }
+
+        .titleMenuIcon {
+            display: inline-block;
+            margin: 0 5px 20px 20px;
+        }
+
+        .novelList {
+            /* border: black 1px solid; */
+            border-bottom: rgb(241, 238, 238) 1px solid;
+            list-style: none;
+        }
+
+        .novelContainer {
+            position: relative;
+        }
+
+        .advertisementImage {
+            width: 100%;
+            height: auto;
+            max-width: 960px;
+        }
+
+        .novelPanel {
+            width: 100%;
+            margin-top: 10px;
+            background: white;
+            font-family: 'AppleSDGothicNeo-Light', 'NanumGothic', 'Dotum', 'Helvetica', 'sans-serif';
+        }
+
+        .novelImage {
+            width: 100%;
+            max-width: 182px;
+        }
+
+        .novelFont {
+            font-size: 10px;
+            color: gray;
+            padding: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .a {
+            animation-duration: 2s;
+            animation-name: slidein;
+            font-size: 15px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        @keyframes slidein {
+            from {
+                font-size: 0px;
+                color: #FF6F61;
+            }
+
+            to {
+                font-size: 15px;
+                color: white;
+            }
+        }
+
+        @media only screen and (min-width: 769px) {
+            .titlebar {
+                position: static;
+                overflow: visible;
+            }
+
+            .titleMenuIcon {
+                display: inline-block;
+                margin: 0 5px 20px 20px;
+            }
+        }
+
+        @media only screen and (min-width: 961px) {
+            .titlebar {
+                width: 960px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .titleMenu {
+                position: relative;
+                color: white;
+                font-family: 'Malgun Gothic';
+                font-size: 25px;
+                width: auto;
+            }
+
+            .titleMenuIcon {
+                display: inline-block;
+                margin: 0 5px 20px 20px;
+            }
+
+            .novelContainer {
+                width: 960px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .novelContainer div {
+                width: 100%;
+            }
+
+            img {
+                display: inline-block;
+            }
+
+            .list {
+                position: relative;
+                left: 20%;
+                width: 20%;
+                display: inline-block;
+            }
+
+            .novelListItem {
+                height: 100%;
+            }
+
+            .novelSubject {
+                padding: 5px;
+            }
+        }
+
+        .a {
+            animation-duration: 2s;
+            animation-name: slidein;
+            font-size: 15px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        @keyframes slidein {
+            from {
+                font-size: 0px;
+                color: #FF6F61;
+            }
+
+            to {
+                font-size: 15px;
+                color: white;
+            }
+        }
+
+        .pbtnlist a {
+            color: #FF6F61;
+        }
+
+        .pbutton {
+            background-color: white;
+            border: 2px solid #FF6F61;
+            color: #FF6F61;
+            font-size: 30px;
+
+        }
+
+        .pbtnlist {
+            position: relative;
+            margin-bottom: 20px;
+            text-align: center;
+
+        }
+
+        .pbtnlist span {
+            width: 20%;
+            padding: 0 5px 0 0;
+        }
+        .foot{
+            width: 100%;
+            padding-top: 18px;
+            margin-top: 117px;
+            margin-right: auto;
+            margin-left: auto;
+            border-top: 1px solid #e6e6e6;
+            /* font-family: '돋움',dotum,sans-serif; */
+        }
+    </style>
+</head>
+
+<body>
+    #box { top: 50%; margin-top: -00px;}
+       
+
+    <div class="titlebar">
+        <div style="float: right;" onclick="{ this.innerHTML = 'logout';}"><a href="../login.do"
+                style="text-decoration: none; color : white">Login</a></div>
+        <div class="titlelogo">Salmon Page</div>
+        <div class="titleMenu">
+            <div class="titleMenuIcon"><a href="../">홈</a>
+            </div>
+            <div class="titleMenuIcon"><a href="FreeNovelPage.html">무료</a></div>
+            <div class="titleMenuIcon"><a href="ChargedNovelPage.html">유료</a></div>
+            <div class="titleMenuIcon"><a href="EndNovelPage.html">완결</a></div>
+            <div class="titleMenuIcon"><a style="border-bottom: 5px solid bisque;" href="list.do">커뮤니티</a>
+                <div class="a">자유게시판</div>
+                <div class="a">감상평</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="novelContainer">
+        <div class="novelPanel" style="margin-top: 0px;">
+
+            <div class="container">
+                <div class="row">
+                    <table class="table table-striped"
+                        style="text-align: center; border: 1px solid #dddddd">
+                        <thead>
+                            <tr>
+                                <th style="background-color: #eeeeee; text-align: center;">번호</th>
+                                <th style="background-color: #eeeeee; text-align: center;">제목</th>
+                                <th style="background-color: #eeeeee; text-align: center;">작성자</th>
+                                <th style="background-color: #eeeeee; text-align: center;">작성일</th>
+                            </tr>
+                        </thead>
+        
+                        <tbody>
+                            <tr>
+                                <td>test1</td>
+                                <td>test2</td>
+                                <td>test3</td>
+                                <td>test4</td>
+                            </tr>
+                        </tbody>
+                    
+                    </table>
+
+                    <a href="#"class="btn btn-success btn-arrow-left">이전</a>
+                    <a href="#"class="btn btn-success btn-arrow-left">다음</a>
+                    <a href="#" class="btn btn-primary pull-right">글쓰기</a>
+                </div>
+        
+            </div><br><br>
+            
+            <div class="novelContainer">
+                <div class="novelPanel" style="margin-top: 0px;">
+                    <div class="pbtnlist">
+                        <span><a class="pbutton" href="list.do?pageNo=1">1</a></span>
+                    </div>
+                    <div style="border-top: 1px solid #e6e6e6; height : 10%; padding :5% 0% 5% 40%; margin-left: auto; margin-right : auto; background: white;">
+                        <div style="text-align: center; display: inline;">
+                            <a href="#" style="font-size: 60%; color: rgb(118, 118, 118)">©SalmonisDelicious</a>
+                        </div>
+                        <span style="color: rgb(230, 230, 230); display: inline;">|</span>
+                        <div style="text-align: left; text-align: center;  display : inline;">
+                            <a href="#" style="font-size: 60%; color: rgb(118, 118, 118)">고객센터</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>                
+</body>
+
+</html>

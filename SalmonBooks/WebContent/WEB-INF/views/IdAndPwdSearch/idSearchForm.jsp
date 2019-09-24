@@ -1,0 +1,115 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	Cookie[] cookie = request.getCookies();
+	String srchId = "";
+	if(cookie !=null){
+		for(Cookie ck : cookie){
+			if(ck.getName().trim().equals("srchId")){
+				srchId = ck.getValue();
+			}
+		}		
+	}
+%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salmon Books 아이디/비밀번호 찾기</title>
+    <link rel="stylesheet" type="text/css" href="/SalmonBooks/resource/css/myPage.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background :rgb(241, 238, 238);
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+        }
+
+        /*라디오버튼 숨김*/
+        input {
+            display: none;
+        }
+
+        a {
+            display: inline-block;
+            margin: 0 0 -1px;
+            padding: 15px 25px;
+            font-weight: 600;
+            text-align: center;
+            color: #ffffff;
+            border: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #bbb;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /*input 클릭시, label 스타일*/
+        input:checked + a {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div id="IDandPW" class="wrap">
+    <form action="idSearch.do" method="post">
+        <div class="titlebar">
+            <div class="titlelogo"><a href="index.jsp" style="color: #fff; text-decoration: none;">Salmon Books</a></div>
+            <div class="row" style="margin-left: 0px; margin-right: 0px">
+                <div class="col">
+                    <input id="tab1" type="radio" style="display: none" name="tabs" checked> <!--디폴트 메뉴-->
+                    <label for="tab1"><a href="idSearch.do">아이디 찾기</a></label>
+                </div>
+                <div class="col">
+                    <input id="tab2" type="radio" style="display: none" name="tabs">
+                    <label for="tab2"><a href="pwdSearch.do">비밀번호 찾기</a></label>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="content1">
+            <div class="container" style="height:120px; padding: 10px 120px;">
+                <h3>아이디 찾기</h3><hr>
+                <p>찾으려는 아이디의 이메일과 전화번호를 입력하세요</p><br>
+            </div>
+            <div class="loginform">
+                <div class="form-group">
+                    <div id="SearchName">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="이름를 입력해주세요">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div id="SearchEmail">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="이메일을 입력해주세요">
+                    </div>
+                </div>
+                <div id="submitBtn" style="margin-top: 15px; float: right">
+                    <button type="submit" onclick="alertId();" class="btn" style="width: 120px; background-color: #FF6F61; color: #FFFFFF; border: #FF6F61;">확인</button>
+                </div>
+                <script>
+                	function alertId(){
+                		var srchId = <%=srchId %>
+                		if(id!=null){
+                			alert(id);
+                		}
+                	}
+                </script>
+            </div>
+        </div>
+        
+        <div class="foot row" style="margin-left: 0px; margin-right: 0px;">
+            <div class="col" style="text-align: right"><a href="#" style="font-size: 60%; color: rgb(118, 118, 118)">©SalmonisDelicious</a></div>
+            <span style="color: rgb(230, 230, 230)">|</span>
+            <div class="col" style="text-align: left;"><a href="#" style="font-size: 60%; color: rgb(118, 118, 118)">고객센터</a></div>
+        </div>
+        </form>
+    </div>
+    
+</body>
+</html>
