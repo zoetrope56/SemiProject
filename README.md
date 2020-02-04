@@ -3,3 +3,5 @@
 
 ##### Database setting
 Run supersalmon.sql file on sqldeveloper.
+
+####ㅋㄷㅋㄷㅋㅋㄷ 
